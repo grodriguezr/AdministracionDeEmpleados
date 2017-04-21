@@ -1,0 +1,38 @@
+﻿@model AdmonEmpleadosModel.Empleado
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h4>Empleado</h4>
+    <hr />
+    @Html.LabelFor(model => model.primerNombre)
+    @Html.EditorFor(model => model.primerNombre)
+    <br />
+    @Html.LabelFor(model => model.segundoNombre)
+    @Html.EditorFor(model => model.segundoNombre)
+    <br />
+    @Html.LabelFor(model => model.primerApellido)
+    @Html.EditorFor(model => model.primerApellido)
+    <br />
+    @Html.LabelFor(model => model.segundoApellido)
+    @Html.EditorFor(model => model.segundoApellido)
+    <br />
+    @Html.LabelFor(model => model.edad)
+    @Html.EditorFor(model => model.edad)
+    <br />
+    @Html.LabelFor(model => model.telefono)
+    @Html.EditorFor(model => model.telefono)
+    <br />
+    <span>Nivel</span>
+    @Html.DropDownList("idNivel", String.Empty)
+    <br />
+    <span>Rol</span>
+    @Html.DropDownList("idRol", String.Empty)
+    <br />
+    <input type="submit" value="Create" />
+
+}

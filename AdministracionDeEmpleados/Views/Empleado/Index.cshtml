@@ -1,0 +1,64 @@
+﻿@model List<AdmonEmpleadosModel.Empleado>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Empleados</h2>
+<table>
+    <tr>
+        <th>
+            Primer nombre
+        </th>
+        <th>
+            Segundo nombre
+        </th>
+        <th>
+            Primer apellido
+        </th>
+        <th>
+            Segundo apellido
+        </th>
+        <th>
+            Edad
+        </th>
+        <th>
+            Teléfono
+        </th>
+        <th>
+            Nivel
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.primerNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.primerApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel.numero)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+

@@ -1,0 +1,63 @@
+﻿@model AdmonEmpleadosModel.Empleado
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<h3>Empleado a modificar</h3>
+@using (Html.BeginForm())
+{
+    <dl>
+        <dt>
+            Primer nombre
+        </dt>
+        <dt>
+            @Html.EditorFor(model => model.primerNombre)
+        </dt>
+        <dt>
+            Segundo nombre
+        </dt>
+        <dt>
+            @Html.EditorFor(model => model.segundoNombre)
+        </dt>
+        <dt>
+            Primer apellido
+        </dt>
+        <dt>
+            @Html.EditorFor(model => model.primerApellido)
+        </dt>
+        <dt>
+            Segundo apellido
+        </dt>
+        <dt>
+            @Html.EditorFor(model => model.segundoApellido)
+        </dt>
+        <dt>
+            Edad
+        </dt>
+        <dt>
+            @Html.EditorFor(model => model.edad)
+        </dt>
+        <dt>
+            Teléfono
+        </dt>
+        <dt>
+            @Html.EditorFor(model => model.telefono)
+        </dt>
+        <dt>
+            Nivel
+        </dt>
+        <dt>
+            @Html.DropDownList("idNivel", String.Empty)
+        </dt>
+        <dt>
+            Rol
+        </dt>
+        <dt>
+            @Html.DropDownList("idRol", String.Empty)
+        </dt>
+    </dl>
+    <input type="submit" value="Modificar" /><br />
+    @Html.ActionLink("Regresar", "Index")
+}
+

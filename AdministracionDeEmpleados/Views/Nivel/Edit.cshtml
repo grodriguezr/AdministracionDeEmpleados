@@ -1,0 +1,26 @@
+﻿@model AdmonEmpleadosModel.Nivel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<h3>Nivel a modificar</h3>
+@using (Html.BeginForm())
+{
+<dl>
+    <dt>
+        @Html.DisplayNameFor(model => model.numero)
+    </dt>
+    <dt>
+        @Html.EditorFor(model => model.numero)
+    </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.precioHora)
+    </dt>
+    <dt>
+        @Html.EditorFor(model => model.precioHora)
+    </dt>
+</dl>
+<input type="submit" value="Modificar" /><br />
+@Html.ActionLink("Regresar", "Index")
+}

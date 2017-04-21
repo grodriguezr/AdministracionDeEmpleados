@@ -1,0 +1,27 @@
+﻿@model AdmonEmpleadosModel.Nivel
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<p>@ViewBag.ErrorMessage</p>
+<h3>Seguro quiere borrar este elemento?</h3>
+<dl>
+    <dt>
+        @Html.DisplayNameFor(model => model.numero)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.numero)
+    </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.precioHora)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.precioHora)
+    </dt>
+</dl>
+@using (Html.BeginForm())
+{ 
+    <input type="submit" value="Borrar"/><br />
+    @Html.ActionLink("Regresar", "Index")
+}

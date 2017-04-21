@@ -1,0 +1,18 @@
+﻿@model AdmonEmpleadosModel.Nivel
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h4>Nivel</h4>
+    <hr />
+    @Html.LabelFor(model => model.numero)
+    @Html.EditorFor(model => model.numero)
+    <br />
+    @Html.LabelFor(model => model.precioHora)
+    @Html.EditorFor(model => model.precioHora)
+    <br />
+    <input type="submit" value="Create" />
+}

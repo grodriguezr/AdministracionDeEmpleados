@@ -1,0 +1,20 @@
+﻿@model AdmonEmpleadosModel.Rol
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<h3>Seguro desea eliminar este elemento?</h3>
+<dl>
+    <dt>
+        @Html.DisplayNameFor(model => model.nombre)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.nombre)
+    </dt>
+</dl>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Borrar" /><br />
+    @Html.ActionLink("Regresar", "Index")
+}

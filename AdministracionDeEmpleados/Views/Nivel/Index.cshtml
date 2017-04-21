@@ -1,0 +1,36 @@
+﻿@model List<AdmonEmpleadosModel.Nivel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Niveles</h2>
+<table>
+    <tr>
+        <th>
+            Número
+        </th>
+        <th>
+            Precio por hora
+        </th>
+        <th>
+            Acciones
+        </th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precioHora)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.id}) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.id})
+            </td>
+        </tr>
+    }
+
+</table>
+
